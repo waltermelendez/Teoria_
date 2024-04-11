@@ -136,3 +136,17 @@ void Lista::Replace(char Aremplazar, char remplazo) {
 		actual = actual->next;
 	}
 }
+bool Lista::Append(Lista*list) {
+	if (list == NULL) {
+		return false;
+	}
+	if (TAIL == NULL) {
+		TAIL->next = list->HEAD;
+		TAIL = list->TAIL;
+	}
+	else
+	{
+		HEAD = list->HEAD;
+		TAIL = list->TAIL;
+	}
+}
